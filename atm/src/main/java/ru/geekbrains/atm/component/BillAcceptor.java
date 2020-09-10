@@ -6,10 +6,10 @@ import org.springframework.stereotype.Service;
 @Component
 public class BillAcceptor {
     public void open(){
-        //открыть купюроприемник
+        System.out.printf("Открыть купюроприемник");
     }
 
     public void close(){
-        //закрыть купюроприемник
+        System.out.printf("Закрыть купюроприемник");
     }
 }

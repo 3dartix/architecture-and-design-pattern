@@ -12,4 +12,7 @@ public class Database {
         return Optional.of(new User(1L, "Василий", "Пупкин", Role.ADMIN));
     }
 
+    public Optional<User> findUserById(Long id){
+        return Optional.of(new User(id, "Василий", "Пупкин", Role.ADMIN));
+    }
 }

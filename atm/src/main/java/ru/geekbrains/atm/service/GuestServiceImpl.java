@@ -11,12 +11,12 @@ import java.math.BigDecimal;
 public class GuestServiceImpl implements ClientService {
 
     private BillAcceptor billAcceptor;
-    private GuestRepository repository;
+    private GuestRepository guestRepository;
 
     @Autowired
-    public GuestServiceImpl(BillAcceptor billAcceptor, GuestRepository repository) {
+    public GuestServiceImpl(BillAcceptor billAcceptor, GuestRepository guestRepository) {
         this.billAcceptor = billAcceptor;
-        this.repository = repository;
+        this.guestRepository = guestRepository;
     }
 
     @Override
@@ -30,6 +30,6 @@ public class GuestServiceImpl implements ClientService {
     }
 
     public BigDecimal getCurrBalance(){
-        return repository.getCurrBalance();
+        return guestRepository.getCurrBalance();
     }
 }

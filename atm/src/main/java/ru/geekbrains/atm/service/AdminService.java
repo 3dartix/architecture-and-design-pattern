@@ -11,7 +11,7 @@ import java.util.List;
 @Service
 public class AdminService {
 
-    private File dest; //путь на флешке для копирования файлов
+    private File destination; //путь на флешке для копирования файлов
 
     public List<String> getListLogs(){
         return new ArrayList<>();
@@ -32,7 +32,7 @@ public class AdminService {
     public void copyFile (String name) {
         File source = new File(name);
         try {
-            FileUtils.copyFile(source, dest);
+            FileUtils.copyFile(source, destination);
         } catch (IOException e) {
             e.printStackTrace();
         }
